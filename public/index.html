@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Screenshot Google Maps</title>
+  <style>
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #pac-input {
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding: 6px 5px 6px 5px;
+        text-overflow: ellipsis;
+        border: 0px #eee;
+        border-radius: 2px;
+        box-shadow: 0px 0px 2px #777;
+        width: 300px;
+      }
+    </style>
+</head>
+<body>
+  <input id="pac-input" class="controls" type="text" placeholder="Search">
+  <div id="map"></div>
+  <div id="app"></div>
+  <script src="/map.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArQr0PPalpP1gA8Y161AOaqFFRtVIvjY0&&libraries=places&callback=initMap"
+    async
+    defer>
+  </script>
+  <script src="/bundle.js"></script>
+</body>
+</html>
