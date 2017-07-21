@@ -7,7 +7,8 @@ function initMap() {
     mapTypeControlOptions: {
       // style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
       position: google.maps.ControlPosition.RIGHT_TOP
-    }
+    },
+    backgroundColor: "none"
   })
   const input = document.getElementById("pac-input")
   const searchBox = new google.maps.places.SearchBox(input)
@@ -57,4 +58,19 @@ function initMap() {
     })
     map.fitBounds(bounds)
   })
+}
+
+// Add eventlisteners for modal
+
+const descriptionBox = document.querySelector("#description-box")
+const overlay = document.querySelector("#overlay")
+overlay.addEventListener("click", removeModal)
+
+const modalButton = document.querySelector("#description-box button")
+modalButton.addEventListener("click", removeModal)
+
+function removeModal(event) {
+  console.log(event)
+  overlay.style.display = "none"
+  descriptionBox.style.display = "none"
 }

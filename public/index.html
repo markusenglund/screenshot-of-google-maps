@@ -14,6 +14,63 @@
         margin: 0;
         padding: 0;
       }
+
+      body {
+        font-family: 'Verdana', sans-serif;
+      }
+
+      #overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(60, 60, 60, 0.5);
+        z-index: 98;
+      }
+      #description-box {
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        background-color: #444;
+        color: #ccc;
+        border-radius: 5px;
+        /*border: 1px #333 solid;*/
+        box-shadow: 0px 0px 4px #222;
+        /*padding: 10px;*/
+        text-align: center;
+      }
+
+      #description-box h1 {
+        /*text-align: center;*/
+        margin: 8px;
+        font-size: 1.5em;
+        font-weight: normal;
+      }
+      #description-box p {
+        margin: 0 10px 10px 10px;
+        text-align: left;
+        font-size: 0.9em;
+      }
+      #description-box button {
+        /*text-align: center;*/
+        margin: 10px;
+        border: 1px #ddd solid;
+        border-radius: 2px;
+        /*box-shadow: 0px 0px 2px #777;*/
+        /*background-color: #79a;*/
+        background-color: #eee;
+        /*color: white;*/
+        font-size: 15px;
+        padding: 3px 6px 3px 6px;
+        cursor: pointer;
+      }
+      #description-box button:hover {
+        background: #dee;
+        text-decoration: none;
+      }
+
+
       #pac-input {
         background-color: #fff;
         font-size: 15px;
@@ -30,6 +87,16 @@
     </style>
 </head>
 <body>
+  <div id="overlay"></div>
+  <div id="description-box">
+    <h1>How to take a screenshot</h1>
+    <p>Zoom in on the part of the map you want to capture.
+    Then click the Download button at the bottom of the page, and
+    an image of the map will be downloaded to your computer as a png
+    file. The zoom-buttons and other stuff will be automatically removed from the image.
+    </p>
+    <button>OK, got it!</button>
+  </div>
   <input id="pac-input" class="controls" type="text" placeholder="Search">
   <div id="map"></div>
   <div id="app"></div>
