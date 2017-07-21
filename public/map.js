@@ -2,7 +2,8 @@ let map
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 0, lng: 0 },
-    zoom: 3
+    zoom: 3,
+    streetViewControl: false
   })
   const input = document.getElementById("pac-input")
   const searchBox = new google.maps.places.SearchBox(input)
