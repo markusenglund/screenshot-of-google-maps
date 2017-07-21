@@ -21,9 +21,9 @@ function handleImageDownload() {
     document.querySelector("#map"),
     { useCORS: true }
   ).then((canvas) => {
-    canvas.toBlob((blob) => {
-      saveAs(blob, "map.png")
-    })
+    // canvas.toBlob((blob) => {
+    //   saveAs(blob, "map.png")
+    // })
     document.body.appendChild(canvas)
     // Put element back together
     // element.style.transform = transform
