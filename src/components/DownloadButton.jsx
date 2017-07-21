@@ -17,8 +17,17 @@ function handleImageDownload() {
 //   element.style.top = `${top}px`
 //
   // Turn google maps into canvas and download canvas as png
+  // Hide controls
+  const controlElements = document.querySelectorAll(".gmnoprint")
+  const reportText = document.querySelector(".gm-style-cc")
+  const searchBox = document.querySelector("#pac-input")
+  controlElements.forEach(node => node.style.visibility = "hidden")
+  reportText.style.visibility = "hidden"
+  searchBox.style.visibility = "hidden"
+
   html2canvas(
     document.querySelector("#map"),
+    // document.querySelector(".gm-style div"),
     { useCORS: true }
   ).then((canvas) => {
     // canvas.toBlob((blob) => {
@@ -29,6 +38,11 @@ function handleImageDownload() {
     // element.style.transform = transform
     // element.style.left = "0px"
     // element.style.top = "0px"
+
+    // Show ui elements again
+    controlElements.forEach(node => node.style.visibility = "visible")
+    searchBox.style.visibility = "visible"
+    reportText.style.visibility = "visible"
   })
 }
 
