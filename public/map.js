@@ -70,8 +70,7 @@ overlay.addEventListener("click", removeModal)
 const modalButton = document.querySelector("#description-box button")
 modalButton.addEventListener("click", removeModal)
 
-function removeModal(event) {
-  console.log(event)
+function removeModal() {
   overlay.style.display = "none"
   descriptionBox.style.display = "none"
 }

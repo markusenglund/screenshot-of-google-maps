@@ -9,8 +9,14 @@
   border: 0px;
   border-radius: 2px;
   box-shadow: 0px 0px 2px #777;
-  background-color: #fff;
-  font-size: 15px;
-  padding: 3px 6px 3px 6px;
+  /*background-color: #fff;*/
+  background-color: rgba(30, 30, 160, 0.9);
+  color: #fff;
+  font-size: 17px;
+  padding: 4px 7px 4px 7px;
   cursor: pointer;
+}
+
+#download-button:hover {
+  background-color: rgb(30, 30, 160)
 }

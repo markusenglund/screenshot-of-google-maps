@@ -27,13 +27,12 @@ function handleImageDownload() {
 
   html2canvas(
     document.querySelector("#map"),
-    // document.querySelector(".gm-style div"),
     { useCORS: true }
   ).then((canvas) => {
-    // canvas.toBlob((blob) => {
-    //   saveAs(blob, "map.png")
-    // })
-    document.body.appendChild(canvas)
+    canvas.toBlob((blob) => {
+      saveAs(blob, "map.png")
+    })
+    // document.body.appendChild(canvas)
     // Put element back together
     element.style.transform = transform
     element.style.left = "0px"
@@ -50,8 +49,7 @@ function DownloadButton() {
   return (
     <div id="download-button-wrapper">
       <button id="download-button" onClick={handleImageDownload}>
-        {/* <i className="fa fa-download" aria-hidden /> */}
-        Download
+        Download image
       </button>
     </div>
   )
