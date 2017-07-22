@@ -49,7 +49,7 @@ function DownloadButton() {
   return (
     <div id="download-button-wrapper">
       <button id="download-button" onClick={handleImageDownload}>
-        Download image
+        Save image
       </button>
     </div>
   )

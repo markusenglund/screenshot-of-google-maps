@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Download an image of Google maps. Go to anywhere on the map and save it as a png-file">
-  <title>Screenshot Google Maps</title>
+  <meta
+    name="description"
+    content="Save a high resolution image of Google maps. Go to anywhere on the map and download it as a png-file with one click."
+  >
+  <title>Take a screenshot of Google Maps</title>
   <style>
       #map {
         height: 100%;
@@ -33,8 +36,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 99;
-        background-color: #444;
-        color: #ccc;
+        background-color: #333;
+        color: #ddd;
         border-radius: 5px;
         /*border: 1px #333 solid;*/
         box-shadow: 0px 0px 4px #222;
@@ -71,7 +74,6 @@
         text-decoration: none;
       }
 
-
       #pac-input {
         background-color: #fff;
         font-size: 15px;
@@ -90,13 +92,12 @@
 <body>
   <div id="overlay"></div>
   <div id="description-box">
-    <h1>How to take a screenshot</h1>
-    <p>Zoom in on the part of the map you want to capture.
-    Then click the "Download image"-button at the bottom of the page, and
+    <h1>Save Google maps as image</h1>
+    <p>Locate the part of the map you want to capture.
+    Then click the "Save image"-button at the bottom of the page, and
     an image of the map will be downloaded to your computer as a png
     file. The zoom-buttons and other stuff will be automatically
     removed from the image.
-
     </p>
     <button>OK, got it!</button>
   </div>

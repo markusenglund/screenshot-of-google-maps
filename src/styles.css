@@ -17,6 +17,6 @@
   cursor: pointer;
 }
 
-#download-button:hover {
+#download-button:hover, #download-button:focus {
   background-color: rgb(30, 30, 160)
 }
