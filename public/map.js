@@ -1,4 +1,4 @@
-let map
+var map
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 0, lng: 0 },
@@ -6,25 +6,24 @@ function initMap() {
     center: { lat: 25, lng: 0 },
     streetViewControl: false,
     mapTypeControlOptions: {
-      // style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
       position: google.maps.ControlPosition.RIGHT_TOP
     },
     backgroundColor: "none"
   })
-  const input = document.getElementById("pac-input")
-  const searchBox = new google.maps.places.SearchBox(input)
+  var input = document.getElementById("pac-input")
+  var searchBox = new google.maps.places.SearchBox(input)
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input)
 
   // Bias the SearchBox results towards current map's viewport.
-  map.addListener("bounds_changed", () => {
+  map.addListener("bounds_changed", function() {
     searchBox.setBounds(map.getBounds())
   })
 
   // let markers = []
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
-  searchBox.addListener("places_changed", () => {
-    const places = searchBox.getPlaces()
+  searchBox.addListener("places_changed", function() {
+    var places = searchBox.getPlaces()
 
     if (places.length === 0) {
       return
@@ -38,8 +37,8 @@ function initMap() {
     // markers = []
 
     // For each place, get the icon, name and location.
-    const bounds = new google.maps.LatLngBounds()
-    places.forEach((place) => {
+    var bounds = new google.maps.LatLngBounds()
+    places.forEach(function(place) {
       if (!place.geometry) {
         // console.log("Returned place contains no geometry")
         return
@@ -63,11 +62,11 @@ function initMap() {
 
 // Add eventlisteners for modal
 
-const descriptionBox = document.querySelector("#description-box")
-const overlay = document.querySelector("#overlay")
+var descriptionBox = document.querySelector("#description-box")
+var overlay = document.querySelector("#overlay")
 overlay.addEventListener("click", removeModal)
 
-const modalButton = document.querySelector("#description-box button")
+var modalButton = document.querySelector("#description-box button")
 modalButton.addEventListener("click", removeModal)
 
 function removeModal() {

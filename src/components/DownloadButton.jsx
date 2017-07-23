@@ -22,8 +22,15 @@ function handleImageDownload() {
   const mapTypeControls = document.querySelectorAll(".gm-style-mtc")
   const bottomRightText = document.querySelectorAll(".gm-style > .gm-style-cc")
   const searchBox = document.querySelector("#pac-input")
-  mapTypeControls.forEach(node => node.style.visibility = "hidden")
-  bottomRightText.forEach(node => node.style.visibility = "hidden")
+
+  for (let i = 0; i < mapTypeControls.length; i += 1) {
+    mapTypeControls[i].style.visibility = "hidden"
+  }
+  for (let i = 0; i < bottomRightText.length; i += 1) {
+    bottomRightText[i].style.visibility = "hidden"
+  }
+  // mapTypeControls.forEach(node => node.style.visibility = "hidden")
+  // bottomRightText.forEach(node => node.style.visibility = "hidden")
   // reportText.style.visibility = "hidden"
   zoomButtons.style.visibility = "hidden"
   searchBox.style.visibility = "hidden"
@@ -43,8 +50,14 @@ function handleImageDownload() {
     element.style.top = "0px"
 
     // Show ui elements again
-    mapTypeControls.forEach(node => node.style.visibility = "visible")
-    bottomRightText.forEach(node => node.style.visibility = "visible")
+    for (let i = 0; i < mapTypeControls.length; i += 1) {
+      mapTypeControls[i].style.visibility = "visible"
+    }
+    for (let i = 0; i < bottomRightText.length; i += 1) {
+      bottomRightText[i].style.visibility = "visible"
+    }
+    // mapTypeControls.forEach(node => node.style.visibility = "visible")
+    // bottomRightText.forEach(node => node.style.visibility = "visible")
     zoomButtons.style.visibility = "visible"
     searchBox.style.visibility = "visible"
   })
